@@ -1,6 +1,6 @@
-import { Head, Link } from "@inertiajs/react";
-import TableList from "./../Components/Table.jsx";
+import { Head } from "@inertiajs/react";
 import Navbar from "@/Components/Navbar.jsx";
+import FeedbackLayout from "@/Components/FeedbackLayout.jsx";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -18,11 +18,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         <>
             <Head title="Feedback tool" />
             <div>
-                <Navbar />
+                <Navbar auth={auth} />
                 <div>
                     <main className="mt-6">
                         <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <TableList />
+                            <FeedbackLayout />
                         </div>
                     </main>
 
