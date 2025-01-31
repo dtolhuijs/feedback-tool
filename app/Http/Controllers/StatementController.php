@@ -13,7 +13,7 @@ class StatementController extends Controller
      */
     public function index()
     {
-        //
+        return Statement::all();
     }
 
     /**
