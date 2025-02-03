@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Statement>
  */
-class StatementFactory extends Factory
+class DebateFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,12 +20,9 @@ class StatementFactory extends Factory
     public function definition(): array
     {
         return [
-            'content' => $this->faker->text(),
+            'title' => $this->faker->domainWord(),
             'user_id' => User::inRandomOrder()->first()->id,
-            'parent_id' => Statement::inRandomOrder()->first()?->id,
-            'debate_id' => Debate::inRandomOrder()->first()?->id,
-            'anonymous' => $this->faker->boolean(20),
-            'likes' => $this->faker->numberBetween(0, 50),
+            'description' => $this->faker->realText(),
         ];
     }
 }

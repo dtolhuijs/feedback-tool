@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Debate;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->text('content');
             $table->foreignIdFor(User::class);
+            $table->foreignIdFor(Debate::class);
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->boolean('anonymous')->default(false);
             $table->integer('likes')->default(0);

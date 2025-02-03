@@ -22,7 +22,7 @@ export default function Statements() {
         <main className="col-span-7 p-4 space-y-4">
             <Card className="p-4 space-y-2">
                 <Input placeholder="What's happening?" />
-                <Button className="w-full">Tweet</Button>
+                <Button className="w-full">Add new statement</Button>
             </Card>
 
             {posts.map((post) => (
