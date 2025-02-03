@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class DebateController extends Controller
 {
-    public function index()
+    public function index(Debate $debate): Debate
     {
-        return Debate::all();
+        return $debate;
     }
 
     public function store(Request $request)

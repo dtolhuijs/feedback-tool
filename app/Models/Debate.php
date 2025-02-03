@@ -17,6 +17,11 @@ class Debate extends Model
         'description',
     ];
 
+    protected $with = [
+        'statements',
+        'user',
+    ];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

@@ -1,5 +1,5 @@
 <?php
 
-use App\Http\Controllers\StatementController;
+use App\Http\Controllers\DebateController;
 
-Route::get('/api/statements', [StatementController::class, 'index']);
+Route::get('/api/debate/{debate}', [DebateController::class, 'index']);

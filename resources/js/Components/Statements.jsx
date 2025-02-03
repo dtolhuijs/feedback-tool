@@ -9,9 +9,11 @@ export default function Statements() {
 
     useEffect(() => {
         axios
-            .get("/api/statements") // Example API
+            .get("/api/debate/1")
             .then((response) => {
-                setPosts(response.data);
+                // mold the data to your needs
+                // parent -> children -> children etc.
+                setPosts(response.data.statements);
             })
             .catch((error) => {
                 console.error("Error fetching posts:", error);
